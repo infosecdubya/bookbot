@@ -1,7 +1,5 @@
 def get_num_words(file_contents):
-	with open('books/frankenstein.txt') as f:
-		file_contents = f.read()
-		num_words = len(file_contents.split())
+	num_words = len(file_contents.split())
 	#print(f"Found {num_words} total words")
 	return num_words
 
@@ -15,8 +13,14 @@ def get_char_counts(file_contents):
 			chars_dict[char] = 1
 	return chars_dict
 
-def print_report(chars_dict):
+def sort_on(chars_dict):
+	return chars_dict["num"]
+
+def print_report(num_words, chars):
 	print("============ BOOKBOT ============")
 	print("Analyzing book found at books/frankenstein.txt...")
 	print("----------- Word Count ----------")
 	print(f"Found {num_words} total words")
+	print("--------- Character Count -------")
+	for bleh in chars:
+		print(f"{bleh["char"]}: {bleh["num"]}")
