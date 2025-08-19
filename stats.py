@@ -16,9 +16,9 @@ def get_char_counts(file_contents):
 def sort_on(chars_dict):
 	return chars_dict["num"]
 
-def print_report(num_words, chars):
+def print_report(num_words, chars, book):
 	print("============ BOOKBOT ============")
-	print("Analyzing book found at books/frankenstein.txt...")
+	print(f"Analyzing book found at {book}...")
 	print("----------- Word Count ----------")
 	print(f"Found {num_words} total words")
 	print("--------- Character Count -------")
